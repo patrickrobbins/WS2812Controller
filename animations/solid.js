@@ -17,7 +17,6 @@ function solid() {
 		Fade2Color2 = parseInt("0x" + args.Brightness);
 		strip.SetBrightness(Brightness);
 		strip.SetStripColor(CurrentFadeColor);
-		this.FadeTick(strip);
 	};
 }
 

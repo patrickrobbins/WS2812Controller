@@ -31,6 +31,8 @@ var rainbow = require("./animations/rainbow.js");
 var control = require("./animations/control.js");
 var dance = require("./animations/dance.js");
 var twinkle = require("./animations/twinkle.js");
+var solid = require("./animations/solid.js");
+
 
 // Find the first local, ipv4 address
 // This is a 'best guess' that the web server can be accessed

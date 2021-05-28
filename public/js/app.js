@@ -58,8 +58,8 @@ function Start2Fade() {
 }
 function Color() {
 	args = {
-		Color: $("#Color").val(),
-		Brightness: $("#Brightness").val(),
+		Color: $("#solidColor").val(),
+		Brightness: $("#solidBrightness").val(),
 	}
 	AnimationRequest("solid", "Solid", args);
 }

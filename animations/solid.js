@@ -14,7 +14,7 @@ var Brightness = 255;
 function solid() {
 	this.Solid = function (args, strip) {
 		CurrentFadeColor = parseInt("0x" + args.Color);
-		Fade2Color2 = parseInt("0x" + args.Brightness);
+		Brightness = parseInt("0x" + args.Brightness);
 		strip.SetBrightness(Brightness);
 		strip.SetStripColor(CurrentFadeColor);
 	};

@@ -15,8 +15,10 @@ function solid() {
 	this.Solid = function (args, strip) {
 		strip.Mode = name + "rainbow";
 		CurrentFadeColor = parseInt("0x" + args.Color);
-		Brightness = parseInt("0x" + args.Brightness);
-		strip.SetBrightness(Brightness);
+		brightness = parseInt(args.Brightness)
+		brightness = Math.max(brightness, 1);
+		brightness = Math.min(brightness, 255);
+		strip.SetBrightness(brightness);
 		strip.SetStripColor(CurrentFadeColor);
 	};
 }

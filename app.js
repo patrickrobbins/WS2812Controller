@@ -142,6 +142,9 @@ function GetLibraryInstance(key) {
 		case "twinkle":
 			lib = twinkle;
 			break;
+		case "solid":
+			lib = solid;
+			break;
 	}
 
 	return lib;

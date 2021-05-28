@@ -56,6 +56,14 @@ function Start2Fade() {
 
 	AnimationRequest("fade", "GoFade2", args);
 }
+function Color() {
+	args = {
+		Color: $("#Color").val(),
+		Brightness: $("#Brightness").val(),
+	}
+	AnimationRequest("color", "Color", args);
+}
+
 
 function UpdateFadeSpeed() {
 	var args = {

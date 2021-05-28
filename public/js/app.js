@@ -61,7 +61,7 @@ function Color() {
 		Color: $("#Color").val(),
 		Brightness: $("#Brightness").val(),
 	}
-	AnimationRequest("color", "Color", args);
+	AnimationRequest("solid", "Solid", args);
 }
 
 

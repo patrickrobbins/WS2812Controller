@@ -175,7 +175,7 @@ var writeIni = (config) => {
 			strip.NUM_LEDS = config.NUM_LEDS;
 		}
 	}
-	catch () {}
+	catch {}
 };
 readIni();
 

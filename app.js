@@ -170,7 +170,7 @@ var readIni = () => {
 var writeIni = (config) => {
 	var config;
 	try {
-		fs.writeFile(__dirname + "/config.ini", JSON.stringify(config);
+		fs.writeFile(__dirname + "/config.ini", JSON.stringify(config));
 		if (config.NumberOfLeds) {
 			strip.NUM_LEDS = config.NUM_LEDS;
 		}

@@ -194,9 +194,9 @@ var server = app.listen(HTTP_PORT, function () {
 	var solidInstance = GetLibraryInstance("solid");
 	if (solidInstance) {
 		solidInstance.Solid({
-			Color: 0xFF4500,
+			Color: FF4500,
 			Brightness: 50,
-		});
+		}, strip);
     };
 	//var rainbowInstance = GetLibraryInstance("rainbow");
 	//if (rainbowInstance) {

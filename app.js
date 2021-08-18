@@ -194,7 +194,7 @@ var server = app.listen(HTTP_PORT, function () {
 	var solidInstance = GetLibraryInstance("solid");
 	if (solidInstance) {
 		solidInstance.Solid({
-			Color: FF4500,
+			Color: 'FF4500',
 			Brightness: 50,
 		}, strip);
     };

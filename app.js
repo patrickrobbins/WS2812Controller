@@ -13,6 +13,7 @@ var app = express();
 var bodyParser = require("body-parser");
 var path = require("path");
 var os = require('os');
+var fs = require('fs');
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
@@ -155,6 +156,27 @@ function GetLibraryInstance(key) {
 /*****************
 	Startup
 *****************/
+var readIni = () => {
+	var config;
+	try {
+		config = fs.readFile(__dirname + "/config.ini");
+		if (config.NumberOfLeds) {
+			strip.NUM_LEDS = config.NUM_LEDS;
+        }
+	}
+	catch {
+    }
+};
+var writeIni = (config) => {
+	var config;
+	try {
+		fs.writeFile(__dirname + "/config.ini", JSON.stringify(config);
+		if (config.NumberOfLeds) {
+			strip.NUM_LEDS = config.NUM_LEDS;
+		}
+	}
+};
+readIni();
 
 var server = app.listen(HTTP_PORT, function () {
 	console.log("***************************");
@@ -163,9 +185,20 @@ var server = app.listen(HTTP_PORT, function () {
 	console.log(" http://" + localAddress + ":" + HTTP_PORT);
 	console.log("***************************");
 
+	//set to solid orangeish with 50 % brightness
+
+
 	// Run the 'Rainbow' routing on startup
-	var rainbowInstance = GetLibraryInstance("rainbow");
-	if (rainbowInstance) {
-        	rainbowInstance.GoRainbow("", strip);
-	}
+
+	var solidInstance = GetLibraryInstance("solid");
+	if (solidInstance) {
+		solidInstance.Solid({
+			Color: 0x888888,
+			Brightness: 50,
+		}
+    };
+	//var rainbowInstance = GetLibraryInstance("rainbow");
+	//if (rainbowInstance) {
+ //       	rainbowInstance.GoRainbow("", strip);
+	//}
 });
